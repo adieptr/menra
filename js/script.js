@@ -2,8 +2,9 @@
 
 const navbarNav = document.querySelector('.navbar-nav');
 
-document.querySelector('#hamburger-menu').onclick = () => {
+document.querySelector('#hamburger-menu').onclick = (e) => {
     navbarNav.classList.toggle('active');
+    e.preventDefault();
     };
 
 
@@ -12,8 +13,9 @@ document.querySelector('#hamburger-menu').onclick = () => {
 
 const shopcart = document.querySelector('.shopping-cart');
 
-document.querySelector('#shopping-cart-button').onclick = () => {
+document.querySelector('#shopping-cart-button').onclick = (e) => {
     shopcart.classList.toggle('active');
+    e.preventDefault();
     };
 
 

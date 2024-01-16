@@ -96,6 +96,7 @@ transform-origin: top;
 .navbar .search-form input{
     height: 100%;
     width: 100%;
+    background: transparent;
     font-size: 1.6rem;
     color: var(--bg);
     padding: 1rem;
@@ -116,8 +117,8 @@ transform-origin: top;
     height: 100vh;
     width: 35rem;
     padding: 0 1.5rem;
-    color: var(--primary);
-    background-color: white;
+    color: var(--bg);
+    background-color: rgb(255, 255, 255);
 }
 
 .shopping-cart.active{
@@ -131,11 +132,10 @@ transform-origin: top;
     align-items: center;
     gap: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom: 1px dashed var(--primary);
+    border-bottom: 1px dashed var(--bg);
 }
 .shopping-cart img{
     height: 6rem;
-    border-radius: 50%;
 }
 .shopping-cart h3{
     font-size: 1.6rem;
@@ -151,7 +151,7 @@ transform-origin: top;
     cursor: pointer;
 }
 .shopping-cart .delete:hover{
-    color: var(--bg);
+    color: rgb(122, 10, 10);
 }
 
 /* Hero  Section */
@@ -200,14 +200,18 @@ transform-origin: top;
     background-color: #af0404cc;
     border-radius: 0.5rem;
     box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+}
 
+.hero .content .cta:hover{
+    color: #ffe89e;
+    background-color: var(--bg);
 }
 
 /* About Section */
 .about, .menu, .product, .contact{
     padding: 8rem 7% 1.4rem;
 }
-.about h2, .menu h2, .product h2, .contact h2 {
+.about h2, .menu h2, .contact h2 {
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 3rem;
@@ -243,7 +247,7 @@ transform-origin: top;
 .menu h2, .contact h2{
     margin-bottom: 1rem;
 }
-.menu p, .product p{
+.menu p{
     text-align: center;
     max-width: 30rem;
     margin: auto;
@@ -265,6 +269,17 @@ transform-origin: top;
 }
 .menu .row .menu-card .menu-card-title{
     margin-top: 1rem auto 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.menu .row .menu-card .menu-card-title:hover{
+    color: var(--primary);
+}
+
+.menu .row .menu-card .menu-card-price{
+    font-size: 1.3rem;
+    
 }
 
 /* Produt section */
@@ -298,9 +313,21 @@ transform-origin: top;
     align-items: center;
 }
 
+.product p{
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+}
+.product h2{
+    text-align: center;
+    font-size: 2.6rem;
+}
 .product .product-icon a:hover{
     background-color: var(--primary);
-    border: 1px solid white;
+    color: #520000;
+    border: 1px solid var(--primary);
 }
 .product .product-image{
     padding: 1rem 0;
@@ -373,6 +400,11 @@ transform-origin: top;
     border-radius: 0.5rem;
 }
 
+.contact .row form .btn:hover{
+    color: rgb(102, 0, 0);
+    background-color: #ffc815;
+}
+
 /* Footer */
 footer{
     background-color: var(--primary);
@@ -425,10 +457,11 @@ footer .credit a:hover{
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.6);
+
 }
 .modal-container{
     position: relative;
-    background-color: rgb(230, 230, 230);
+    background-color: white;
     color: black;
     margin: 15% auto;
     padding: 1.2rem;
@@ -436,6 +469,7 @@ footer .credit a:hover{
     width: 80%;
     animation: animate 0.5s;
 }
+
 
 /* Modal Animation */
 
@@ -478,8 +512,29 @@ footer .credit a:hover{
     color: black;
     margin-top: 1rem;
     padding: 1rem 1.6rem;
-
+    border-radius: 25px;
 }
+.modal-content a:hover{
+    background-color: #ffae00;
+    color: black; 
+}
+
+.modal .modal-container .modal-content .product-content .product-star .star-full{
+    fill: var(--primary);
+}
+.modal .modal-container .modal-content .product-content .product-price{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.modal .modal-container .modal-content .product-content .product-price span{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1rem;
+} 
+
+
+
 /* Media Queries */
 
 /* Laptop */
